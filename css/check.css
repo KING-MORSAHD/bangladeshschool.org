@@ -1,0 +1,93 @@
+*{margin: 0; padding: 0;box-sizing: border-box; 
+ font-family: 'Rubik', sans-serif; }
+html{
+  font-size: 62.5%;
+}
+header{
+	width: 100%;
+	height: 100vh;
+    background-image:linear-gradient(to left, #fff 85%, #c3f5ff 20%)
+}
+
+.mainheader{
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-image: linear-gradient(to top, #fff 40%, #c3f5ff 60%)
+}
+
+
+.mainheader .title {
+	width: 30%;
+	color: #fff;
+	background-image: linear-gradient(#8d98e3 40%, #854fee 60%);
+	padding-left:10rem;
+}
+.mainheader .title h2{
+	text-transform: uppercase;
+	animation: king 2s linear infinite;
+	animation-direction: alternate;
+}
+@keyframes king{
+	from {padding-left: 15rem;}
+	to{padding-right: 100rem;}
+}
+nav{
+  height: 10vh;
+  text-transform: uppercase;
+}
+nav ul{
+  float: left;
+  margin-right: 1rem;
+  list-style: none;
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  color: black;
+  display: block;
+  padding: 0 1.5rem;
+  line-height:10rem;
+  font-size: 2rem;
+  transition:.5s;
+}
+nav ul li a:hover,
+nav ul li a.active{
+  color: #23dbdb;
+}
+nav ul ul{
+  position: absolute;
+  top: 5vh;
+  opacity: 0;
+  visibility: hidden;
+}
+nav ul li:hover > ul{
+  top: 12rem;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+nav ul ul li{
+  width: 20rem;
+  display: list-item;
+  position: relative;
+
+}
+nav ul ul li a{
+  line-height: 5rem;
+  font-size: 1.5rem;
+  width: 30rem;
+}
+@media (max-width: 998px){
+  html{
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px){
+  html{
+    font-size: 45%;
+  }
+}
